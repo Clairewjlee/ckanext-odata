@@ -11,7 +11,10 @@ Example
 
 #}
 {% set sql_example_url = datastore_root_url + '/datastore_search_sql?sql=SELECT * from "' + resource_id + '" WHERE title LIKE \'jones\'' %}
-
+{% if not embedded %}
+<div class="modal-dialog">
+<div class="modal-content">
+{% endif %}
 <div{% if not embedded %} class="modal"{% endif %}>
   <div class="modal-header">
     <h3>
@@ -148,7 +151,7 @@ print fileobj.read()
       </div>
     </div>
   </div>
-
+{% if not embedded %}</div></div>{% endif %}
 </div>
 
 </div>
