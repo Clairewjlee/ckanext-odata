@@ -11,11 +11,11 @@ Example
 
 #}
 {% set sql_example_url = datastore_root_url + '/datastore_search_sql?sql=SELECT * from "' + resource_id + '" WHERE title LIKE \'jones\'' %}
+<div{% if not embedded %} class="modal"{% endif %}>
 {% if not embedded %}
 <div class="modal-dialog">
 <div class="modal-content">
 {% endif %}
-<div{% if not embedded %} class="modal"{% endif %}>
   <div class="modal-header">
     <h3>
       {{ _('CKAN Data API') }}
